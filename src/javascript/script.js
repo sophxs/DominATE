@@ -1,4 +1,4 @@
-let targetDate = new Date("Apr 05, 2025 00:00:00").getTime();
+let targetDate = new Date("Apr 05, 2025 19:30:00").getTime();
 
 daysEle = document.getElementById("dias");
 hoursEle = document.getElementById("horas");
@@ -10,9 +10,9 @@ let countdownTimer = setInterval (() => {
   let timeDiff = targetDate - now;
 
   let days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-  let hours = Math.floor(((timeDiff - 1000 * 60 * 60 * 24 * days) % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  let minutes = Math.floor ((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-  let seconds = Math.floor ((timeDiff % (1000 * 60)) / 1000);
+  let hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
   daysEle.innerText = days;
   hoursEle.innerText = hours;
