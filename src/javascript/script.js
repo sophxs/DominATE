@@ -1,4 +1,4 @@
-let targetDate = new Date("Apr 05, 2025 19:30:00").getTime();
+let targetDate = new Date("Apr 05, 2025 19:30:00-03:00").getTime();
 
 daysEle = document.getElementById("dias");
 hoursEle = document.getElementById("horas");
